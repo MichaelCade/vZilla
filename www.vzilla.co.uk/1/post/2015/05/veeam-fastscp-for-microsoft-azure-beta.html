@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<title>Veeam FastSCP for Microsoft Azure (BETA) - vZilla.co.uk</title>
+<meta property='og:site_name' content='vZilla.co.uk' />
+<meta property='og:title' content='Veeam FastSCP for Microsoft Azure (BETA)' />
+<meta property='og:description' content='What is FastSCP ? FastSCP is the simplest and fastest way to deliver ISO files to ESX Servers or copy VMs and templates between ESX Servers. FastSCP ensures security by using a one-time password...' />
+<meta property='og:image' content='http://vzilla.co.uk/uploads/3/2/3/9/3239227/4739166.png' />
+<meta property='og:image' content='http://vzilla.co.uk/uploads/3/2/3/9/3239227/7601178_orig.png' />
+<meta property='og:url' content='http://vzilla.co.uk/1/post/2015/05/veeam-fastscp-for-microsoft-azure-beta.html' />
+<meta http-equiv='cache-control' content='no-cache' />
+<link rel='alternate' type='application/rss+xml' title='RSS 2.0' href='http://vzilla.co.uk/1/feed' />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<link rel="stylesheet" href="//assets.dragndropbuilder.com/css/sites.css?buildTime=1432850078" type="text/css" /><link rel='stylesheet' type='text/css' href='http://www.dragndropbuilder.com/editor/libraries/fancybox/fancybox.css?1432850078' />
+<link rel='stylesheet' type='text/css' href='/files/main_style.css?1452545803' title='wsite-theme-css' />
+<style type='text/css'>
+.wsite-elements div.paragraph, .wsite-elements p, .wsite-elements .product-block .product-title, .wsite-elements .product-description, .wsite-elements .wsite-form-field label, .wsite-elements .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements h2, .wsite-elements .product-long .product-title, .wsite-elements .product-large .product-title, .wsite-elements .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-title {}
+</style>
+<script><!--
+var STATIC_BASE = 'http://www.dragndropbuilder.com/';
+var STYLE_PREFIX = 'wsite';
+//-->
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+<script src='//assets.dragndropbuilder.com/js/site/main.js?buildTime=1432850078'></script>
+<script type='text/javascript'><!--
+(function(jQuery){
+function initFlyouts(){initPublishedFlyoutMenus([{"id":"585258828175266744","title":"Home","url":"index.html","target":""},{"id":"127302207674349487","title":"About vZilla","url":"about-vzilla.html","target":""},{"id":"459605263778525960","title":"vZilla HomeLab","url":"vzilla-homelab.html","target":""},{"id":"894781723381334435","title":"vZilla Blog","url":"vzilla-blog.html","target":""}],'894781723381334435',"<li class='wsite-nav-more'><a href='#'>more...<\/a><\/li>",'active',false)}
+if (jQuery) {
+if (jQuery.browser.msie && !window.flyoutMenusRefreshable) window.onload = initFlyouts;
+else jQuery(initFlyouts);
+}else{
+if (Prototype.Browser.IE) window.onload = initFlyouts;
+else document.observe('dom:loaded', initFlyouts);
+}
+})(window._W && _W.jQuery)
+//-->
+</script>
+</head>
+<body class='wsite-theme-light no-header-page wsite-page-vzilla-blog'>
+<div id="container">
+	<table id="header">
+		<tr>
+			<td id="logo"><span class='wsite-logo'><a href='/'><img src='/uploads/3/2/3/9/3239227/4739166.png' /></a></span></td>
+			<td id="header-right">
+				<table>
+					<tr>
+						<td class="phone-number"></td>
+						<td class="social"><div style="text-align:left;"><div style="height:0px;overflow:hidden"></div>
+<span class="wsite-social wsite-social-default"><a class='wsite-social-item wsite-social-twitter' href='http://twitter.com/michaelcade1' target='_blank'><span class='wsite-social-item-inner'></span></a><a class='wsite-social-item wsite-social-linkedin' href='http://uk.linkedin.com/in/MichaelCade1' target='_blank'><span class='wsite-social-item-inner'></span></a><a class='wsite-social-item wsite-social-mail' href='mailto:michael.cade@outlook.com' target='_blank'><span class='wsite-social-item-inner'></span></a></span>
+<div style="height:0px;overflow:hidden"></div></div></td>
+					</tr>
+				</table>
+				<div class="search"></div>
+			</td>
+		</tr>
+	</table>
+	<div id="main-bot">
+		<div id="main-top">
+			<div id="main">
+				<div id="navigation">
+					<ul class='wsite-menu-default'><li id='pg585258828175266744'><a href='/index.html'>Home</a></li><li id='pg127302207674349487'><a href='/about-vzilla.html'>About vZilla</a></li><li id='pg459605263778525960'><a href='/vzilla-homelab.html'>vZilla HomeLab</a></li><li id='active'><a href='/vzilla-blog.html'>vZilla Blog</a></li></ul>
+					<div class="clear"></div>
+					<em id="tl"></em>
+					<em id="tr"></em>
+					<em id="bl"></em>
+					<em id="br"></em>
+				</div>
+				<div id="banner-bot">
+					<div id="banner-top">
+						<div id="banner">
+							<div class="wsite-header"></div>
+						</div>
+					</div>
+				</div>
+				<div id="content">
+					<table style='border: 0; width: 100%; table-layout: fixed' id='blogTable'><tr><td valign='top'><div id='894781723381334435-blog' class='blog-body' style='float: left;'>
+<div id='wsite-content'><div id='blog-post-447395154171960303' class='blog-post'><div class='blog-header'><h2 class='blog-title'><a href='/1/post/2015/05/veeam-fastscp-for-microsoft-azure-beta.html' class='blog-title-link' class='blog-link'>Veeam FastSCP for Microsoft Azure (BETA)</a></h2> <p class='blog-date'><span class='date-text'>05/05/2015</span></p><!-- 447395154171960303 -->
+<p class='blog-comments'><a href='/1/post/2015/05/veeam-fastscp-for-microsoft-azure-beta.html#comments' class='blog-link'>1 Comment</a></p></div><div class='blog-separator'> &nbsp; </div><div class='blog-content'><div class="paragraph" style="text-align:left;">           <strong>What is FastSCP ? </strong><br /><span style=""></span><br /><span style=""></span>    FastSCP is the simplest and fastest way to deliver ISO files to ESX Servers or copy VMs and templates between ESX Servers. FastSCP ensures security by using a one-time password feature and works more than six times faster than SCP.<br /><span style=""></span><br /><span style=""></span>    <strong>What is Microsoft Azure ? </strong><br /><span style=""></span><br /><span style=""></span>    Microsoft Azure (formerly Windows Azure before 25 March 2014) is a cloud computing platform and infrastructure, created by Microsoft, for building, deploying and managing applications and services through a global network of Microsoft-managed datacenters.<br /><span style=""></span><br /><span style=""></span>    <strong>The Problem </strong><br /><span style=""></span><br /><span style=""></span>    There are many problems or issues currently associated with how we can bring back data from the public cloud and send it back up again if required. All of which currently are quite time consuming to complete. <br /><span style=""></span><br /><span style=""></span>    Currently if you want to be able to upload data to and from Microsoft Azure you will require a VPN connection and a copy will either take place over an RDP connection or you will have to attach the data to a VHD<br /><span style=""></span><br /><span style=""></span>    Without VPN , the only way to get data into an azure VM is via RDP ( slow &ndash; has 2GB file limit )&nbsp; or via uploading and attaching a VHD ( complex)<br /><span style=""></span><br /><span style=""></span>    For example if you are running a SQL instance in Microsoft Azure and you would like your developers to access this data On-Premises to perform code changes then this can be a timely download for starters. Another example could possibly be for developers that require an upload a numerous occasions throughout the working day and rather than having to make sure the VPN is in place and having to create disks, upload etc then the following solution would help save a lot of time and effort. <br /><span style=""></span><br /><span style=""></span>    <strong>The Solution - Veeam FastSCP for Microsoft Azure Beta</strong><br /><span style=""></span><br /><span style=""></span>    Free, Secure file copy for Azure Virtual Machines <br /><span style=""></span><br /><span style=""></span>    Much the same as Veeam FastSCP worked back in the day for us moving files between ESX servers and downloading to our local machines for small edits etc. <br /><span style=""></span><br /><span style=""></span>    Veeam FastSCP for Microsoft Azure Beta allows you to simply and reliably copy local files to Azure Virtual Machines and vice versa without the need of setting up VPN tunnels between your On-Premises and Azure platforms. <br /><span style=""></span><br /><span style=""></span>    It will allow a secure file copy with no independent encryption required. <br /><span style=""></span><br /><span style=""></span>    This process can be on a scheduled or manual process, allowing for test and development teams to have the most up to date database or files to work on without having to go and download on demand and wait for the download to complete before work can commence. <br /><span style=""></span><br /><span style=""></span>    <ul style="" "margin-left:.375in;direction:ltr;unicode-bidi:embed;="" margin-top:0in;margin-bottom:0in"=""><li style="">Not blob storage. </li><li style="">Only Azure VMs </li><li style="">Doesn&rsquo;t require VPN </li><li style="">Encryption is built into the      product </li><li style="">Manual file copies as well as      scheduling </li></ul>      </div>  <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center"> <a> <img src="/uploads/3/2/3/9/3239227/7601178_orig.png" alt="Picture" style="width:100%;max-width:440px" /> </a> <div style="display:block;font-size:90%"></div> </div></div></div><div class='blog-social'><div class='blog-social-item'><a class='twitter-share-button' href='http://twitter.com/share?url=http%3A%2F%2Fvzilla.co.uk%2F1%2Fpost%2F2015%2F05%2Fveeam-fastscp-for-microsoft-azure-beta.html' data-count='horizontal'></a></div><div class='blog-social-item blog-fb-like'><fb:like href='http://vzilla.co.uk/1/post/2015/05/veeam-fastscp-for-microsoft-azure-beta.html' show_faces='false' layout='button_count' width='90'></fb:like></div><div style='clear:both'></div></div>
+<div class='blog-post-separator'>&nbsp;</div>
+
+</div><a name='comments' id='comments'></a><br/><br/><div id='commentArea'><div id='commentText'><h2 id='commentAreaTitle'>Comments</h2><div id="comment550519069318448260">
+		<div class='blogCommentWrap even blogCommentLevel0'>
+			<div class='blogCommentHeading'>
+				<div class='blogCommentHeadingInner'>
+					
+		<div class="blogCommentAuthor"><a class="name" href="http://www.trustessays.com/best-essays">http://www.trustessays.com/best-essays</a> <a href="http://www.trustessays.com/best-essays" class="link" rel="nofollow">link</a> </div> <div class="blogCommentDate">18/09/2015 11:30</div>
+					<div class='clear'></div>
+				</div>
+			</div>
+			<div class="blogCommentText"><p>Thanks for posting it. After reading it I made sure that this program can solve a lot of tasks. I didn't understand about manual process, but I hope my friends would explain me it. Your detailed description helped me too.</p></div> 
+		<div class="blogCommentOptions"> 
+		<span href="#" class="blog-button reply-comment" onclick="blogCommentDisplayForm('http://www.dragndropbuilder.com/editor/apps/showCommentForm-v2.php?user_id=3239227&blog_id=664567885456871353&post_id=447395154171960303&comment_id=550519069318448260&parent=http://www.vzilla.co.uk/1/post/2015/05/veeam-fastscp-for-microsoft-azure-beta.html&is_mobile=&parent_id=550519069318448260&r=3&is_light=1', 'blogCommentReplyWrapper_550519069318448260', '550519069318448260'); return false;" title="Reply to this comment" style="display: none">
+			<span>Reply</span>
+		</span> <div class="clear"></div>   
+		<div id="blogCommentReplyWrapper_550519069318448260" class="blogCommentReplyWrapper blogCommentSubreplyWrapper " style="display: none;">
+			<div class="iframeWrapper"><div class="iframeContainer"></div></div>
+		</div></div>
+		</div>
+	</div><!-- lastComment --><div id='lastComment'> </div></div><br/><div class='blog-notice-comments-closed'> Comments are closed.</div><!-- bid-1: 664567885456871353, path: /1/post/2015/05/veeam-fastscp-for-microsoft-azure-beta.html --><!-- bid: 664567885456871353 --></div>
+</div>
+</td><td class='blog-sidebar' valign='top'><div id='894781723381334435-sidebar' class='column-blog'><div class='blog-sidebar-separator'><ul id='894781723381334435-sidebar-list' class='columnlist-blog' style='margin:0; padding: 0;'> <h2 class="blog-author-title" style="text-align:left;">vZilla.co.uk</h2>
+<p style="text-align:left;">As you can probably tell my name is not vZilla.co.uk, as stated on the home page the views are of my own and not of my employer.&nbsp;</p>
+
+<h2 class="blog-archives-title" style="text-align:left;">Archives</h2>
+<p class='blog-archive-list'><a href='/1/archives/01-2016/1.html' class='blog-link'>January 2016</a><br />
+<a href='/1/archives/11-2015/1.html' class='blog-link'>November 2015</a><br />
+<a href='/1/archives/10-2015/1.html' class='blog-link'>October 2015</a><br />
+<a href='/1/archives/09-2015/1.html' class='blog-link'>September 2015</a><br />
+<a href='/1/archives/07-2015/1.html' class='blog-link'>July 2015</a><br />
+<a href='/1/archives/05-2015/1.html' class='blog-link'>May 2015</a><br />
+<a href='/1/archives/04-2015/1.html' class='blog-link'>April 2015</a><br />
+<a href='/1/archives/03-2015/1.html' class='blog-link'>March 2015</a><br />
+<a href='/1/archives/02-2015/1.html' class='blog-link'>February 2015</a><br />
+<a href='/1/archives/01-2015/1.html' class='blog-link'>January 2015</a><br />
+<a href='/1/archives/12-2014/1.html' class='blog-link'>December 2014</a><br />
+<a href='/1/archives/11-2014/1.html' class='blog-link'>November 2014</a><br />
+<a href='/1/archives/08-2014/1.html' class='blog-link'>August 2014</a><br />
+<a href='/1/archives/07-2014/1.html' class='blog-link'>July 2014</a><br />
+<a href='/1/archives/06-2014/1.html' class='blog-link'>June 2014</a><br />
+<a href='/1/archives/01-2014/1.html' class='blog-link'>January 2014</a><br />
+<a href='/1/archives/12-2013/1.html' class='blog-link'>December 2013</a><br />
+<a href='/1/archives/07-2013/1.html' class='blog-link'>July 2013</a><br />
+<a href='/1/archives/04-2013/1.html' class='blog-link'>April 2013</a><br />
+</p>
+
+<h2 class="blog-category-title" style="text-align:left;">Categories</h2>
+<p class='blog-category-list'><a href='/1/category/all/1.html' class='blog-link'>All</a><br />
+</p>
+
+<p class='blog-feed-link'><a href='/1/feed'><img src='http://www.dragndropbuilder.com/editor/images/common/bg_feed.gif' /> RSS Feed</a></p> </ul></div></div></td></tr></table><hr style='visibility: hidden; clear: both;' />
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class='wsite-elements wsite-footer'>
+<div><div class="wsite-multicol"><div class='wsite-multicol-table-wrap' style='margin:0 -15px'>
+<table class='wsite-multicol-table'>
+<tbody class='wsite-multicol-tbody'>
+<tr class='wsite-multicol-tr'>
+<td class='wsite-multicol-col' style='width:50%;padding:0 15px'></td>
+<td class='wsite-multicol-col' style='width:50%;padding:0 15px'></td>
+</tr>
+</tbody>
+</table>
+</div></div></div>
+
+<div class="paragraph"><a href='http://www.ipage.com/' target='_blank'>Web Hosting</a> by iPage</div></div><script type='text/javascript'>
+<!--
+
+if (document.cookie.match(/(^|;)\s*is_mobile=1/)) {
+	var windowHref = window.location.href || '';
+	if (windowHref.indexOf('?') > -1) {
+		windowHref += '&';
+	} else {
+		windowHref += '?';
+	}
+	document.write(
+		"&nbsp;&nbsp;&nbsp;&nbsp;" +
+		"<a class='wsite-view-link-mobile' href='" + windowHref + "view=mobile'>Mobile Site</a>"
+	);
+}
+
+//-->
+</script>
+
+		<div class="clear"></div>
+	</div>
+</div>
+
+<div id='fb-root'></div><script type='text/javascript'>(function() {function j(src, root) {var s = document.createElement('script');s.type = 'text/javascript';s.async = true;s.src = src;(root || document.getElementsByTagName('head')[0]).appendChild(s);}j('http://connect.face'+'book.net/en_US/all.js#xfbml=1', document.getElementById('fb-root'));j('http://platform.twi'+'tter.com/widgets.js');})()</script>
+</body>
+</html>
