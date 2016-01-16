@@ -1,4 +1,0 @@
-Sitemap: http://vzilla.co.uk/sitemap.xml
-
-User-agent: *
-Disallow: 
